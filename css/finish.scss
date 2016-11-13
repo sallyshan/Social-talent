@@ -1,0 +1,60 @@
+@charset "utf-8";
+@import url(reset.css);
+@mixin full{
+	width:100%;
+	height:100%;
+}
+@mixin pos($v:relative){
+	position:$v;
+}
+@mixin box($v:horizontal){
+	display:-webkit-box;
+	-webkit-box-orient:$v;
+}
+body,html,.box{
+	@include full;
+	//overflow:hidden;
+}
+
+.finish{
+	&>div{
+		@include full;
+		background:#ccc;
+		display:none;
+		h1{
+			padding-top:20px;
+			width:80%;
+			margin:0 auto;
+			height:60px;
+			img{
+				width:100%;
+			}
+		}
+		p{
+			width:90%;
+			padding-top:10px;
+			text-align:center;
+			font-size:12px;
+			line-height:20px;
+			margin:10px auto;
+			img{
+				width:100%;
+			}
+		}
+	}
+
+}
+
+.btn_or{
+	width:100%;
+	height:50px;
+	@include box;
+	&>a{
+		display:block;
+		padding:0 10px;
+		-webkit-box-flex:1;
+		img{
+			width:100%;
+		}
+	}
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>Document</title>
+	<link rel="stylesheet" href="css/scene.css">
+</head>
+<body>
+	<div class="box">
+		<div class="main" id="main">
+			<h1 class="left" id="left"></h1>
+			<h1 class="right" id="right"></h1>
+			<section id="date" class="date">
+				<img src="images/scene/tit.png">
+				<img src="images/scene/pic.png">
+			</section>
+			<section id="river" class="river">
+				<img src="images/scene/ptit.png">
+				<img src="images/scene/rive.png">	
+			</section>
+			<section id="job" class="job">
+				<img src="images/scene/wtit.png">
+				<img src="images/scene/wpic.png">
+			</section>
+		</div>
+		<footer>
+			<a href="#" id="this"><img src="images/scene/btn.png"></a>
+		</footer>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="js/zepto.min.js"></script>
+<script type="text/javascript" src="js/scene.js"></script>
+<script type="text/javascript">
+	var obj1=new swiper({
+		wrap:$("#main"),
+		next:$("#right"),
+		prev:$("#left"),
+		type:"touch",
+		page:"section",
+		callback:function(){
+			
+		},
+		btn : $("#this")
+	})
+</script>

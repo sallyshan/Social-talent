@@ -1,0 +1,38 @@
+@import url(reset.css);
+body, html, .box {
+  width: 100%;
+  height: 100%; }
+
+.finish > div {
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: none; }
+  .finish > div h1 {
+    padding-top: 20px;
+    width: 80%;
+    margin: 0 auto;
+    height: 60px; }
+    .finish > div h1 img {
+      width: 100%; }
+  .finish > div p {
+    width: 90%;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+    margin: 10px auto; }
+    .finish > div p img {
+      width: 100%; }
+
+.btn_or {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  -webkit-box-orient: horizontal; }
+  .btn_or > a {
+    display: block;
+    padding: 0 10px;
+    -webkit-box-flex: 1; }
+    .btn_or > a img {
+      width: 100%; }

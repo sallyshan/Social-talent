@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import url(reset.css);
+@mixin full{
+	width:100%;
+	height:100%;
+}
+@mixin pos($val:relative){
+	position:$val;
+}
+@-webkit-keyframes move{
+	0%{
+		width:0;
+	}
+	25%{
+		width:50px;
+	}
+	50%{
+		width:100px;
+	}
+	75%{
+		width:150px
+	}
+	100%{
+		width:200px;
+	}
+}
+body,html,.box{
+	@include full;
+	overflow:hidden;
+}
+
+/*-----------------以上为全局-------------------*/
+.box{
+	background-image:url(../images/guid/bg.png);
+	section{
+		@include full;
+	}
+}
+.index{
+	text-align:center;
+	img{
+		width:90px;
+		height:130px;
+		margin-top:45%;
+	}
+	.progress{
+		margin:0 auto;
+		margin-top:30px;
+		@include pos;
+		width:200px;
+		height:16px;
+		border-radius:4px;
+		border:1px solid #ccc;
+		&>p{
+			@include pos(absolute);
+			top:0;
+			left:0;
+			width:0;
+			height:14px;
+			background:green;
+			border-radius:4px;
+			border:1px solid transparent;
+		}
+	}
+}
+.sex{
+	background:url(../images/guid/3.png) no-repeat center 50px;
+	background-size:80%;
+	h1{
+		display:-webkit-box;
+		padding-top:88%;
+		&>a{
+			display:block;
+			-webkit-box-flex:1;
+			text-align:center;
+			background-repeat:no-repeat;
+			background-position:center center;
+			background-size:90px 90px;
+			padding-top:80px;
+			color:transparent;
+			&:nth-child(1){
+				background-image:url(../images/guid/boy.png);
+			}
+			&:nth-child(2){
+				background-image:url(../images/guid/girl.png);
+			}
+		}
+	}
+}
+.star{
+	text-align:center;
+	background:url(../images/guid/1.png) no-repeat center 30px;
+	padding-top:30%;
+	a{	
+		display:inline-block;
+		width:22%;
+		margin:0 3%;
+		text-align:center;
+		img{
+			width:100%;
+			margin-top:10px;
+		}	
+	}
+}
